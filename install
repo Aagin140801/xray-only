@@ -35,6 +35,7 @@ KEY="5432820291:AAFvWwdhQSb96UEVCv4XrZDHD_n27BSbtcs"
 KEY2="5919349861:AAFPlWkQPkVS9eynngn6lAYPDbbvz6oOF94"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 URL2="https://api.telegram.org/bot$KEY2/sendMessage"
+AA="https://github.com/Aagin140801/xray-only/raw/"
 GITHUB_CMD="https://github.com/FighterTunnel/tunnel/raw/"
 OS=$(cat /etc/os-release | grep -w PRETTY_NAME | head -n1 | sed 's/=//g' | sed 's/"//g' | sed 's/PRETTY_NAME//g')
 
@@ -397,7 +398,7 @@ function install_xray() {
     bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.7.5 
     curl https://rclone.org/install.sh | bash 
     printf "q\n" | rclone config  
-    wget -O /root/.config/rclone/rclone.conf "http://raw.githubusercontent.com/Aagin140801/xray-only/refs/heads/main/rclone.conf" >/dev/null 2>&1
+    wget -O /root/.config/rclone/rclone.conf "${AA}main/RCLONE%2BBACKUP-Gdrive/rclone.conf" >/dev/null 2>&1
     wget -O /etc/xray/rclone.conf "${GITHUB_CMD}main/VMess-VLESS-Trojan%2BWebsocket%2BgRPC/config.json" >/dev/null 2>&1
 
 cat > /etc/msmtprc <<EOF
