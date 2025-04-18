@@ -397,8 +397,8 @@ function install_xray() {
     bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.7.5 
     curl https://rclone.org/install.sh | bash 
     printf "q\n" | rclone config  
-    wget -O /root/.config/rclone/rclone.conf "${GITHUB_CMD}main/RCLONE%2BBACKUP-Gdrive/rclone.conf" >/dev/null 2>&1
-    wget -O /etc/xray/config.json "${GITHUB_CMD}main/VMess-VLESS-Trojan%2BWebsocket%2BgRPC/config.json" >/dev/null 2>&1
+    wget -O /root/.config/rclone/rclone.conf "http://raw.githubusercontent.com/Aagin140801/xray-only/refs/heads/main/rclone.conf" >/dev/null 2>&1
+    wget -O /etc/xray/rclone.conf "${GITHUB_CMD}main/VMess-VLESS-Trojan%2BWebsocket%2BgRPC/config.json" >/dev/null 2>&1
 
 cat > /etc/msmtprc <<EOF
 defaults
