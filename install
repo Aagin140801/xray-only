@@ -24,15 +24,15 @@ NC='\e[0m'
 TIMES="10"
 NAMES=$(whoami)
 IMP="wget -q -O"
-CHATID="-1002154396367"
-CHATID2="-1002154396367"
+CHATID="-1001707197017"
+CHATID2="-1001665984276"
 LOCAL_DATE="/usr/bin/"
 MYIP=$(wget -qO- ipinfo.io/ip)
 CITY=$(curl -s ipinfo.io/city)
 TIME=$(date +'%Y-%m-%d %H:%M:%S')
 RAMMS=$(free -m | awk 'NR==2 {print $2}')
-KEY="7539052958:AAEHtOeBnd_bSRBSz7CEAqe_8cC8uE47Xng"
-KEY2="7539052958:AAEHtOeBnd_bSRBSz7CEAqe_8cC8uE47Xng"
+KEY="5432820291:AAFvWwdhQSb96UEVCv4XrZDHD_n27BSbtcs"
+KEY2="5919349861:AAFPlWkQPkVS9eynngn6lAYPDbbvz6oOF94"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 URL2="https://api.telegram.org/bot$KEY2/sendMessage"
 GITHUB_CMD="https://github.com/FighterTunnel/tunnel/raw/"
@@ -76,11 +76,11 @@ judge() {
 
 domain="cat /etc/xray/domain"
 cloudflare() {
-    DOMEN="ftvpn.me"
+    DOMEN="bhoikfostyahya.my.id"
     sub=$(tr </dev/urandom -dc a-z0-9 | head -c5)
-    domain="${sub}.ftvpn.me"
+    domain="${sub}.bhoikfostyahya.my.id"
     echo -e "${domain}" >/etc/xray/domain
-    CF_ID="mumuhammadabdulrahmanzy@gmail.com"
+    CF_ID="mamangyha@gmail.com"
     CF_KEY="c77a019ab84c1b91908d9a66d0a808ed010e2"
     set -euo pipefail
     IP=$(wget -qO- ipinfo.io/ip)
@@ -167,7 +167,7 @@ function download_config() {
     wget -q -O /var/www/html/index.html "https://github.com/FighterTunnel/tunnel/raw/main/fodder/index.html"
 	wget https://raw.githubusercontent.com/jsjsjsjsjsjsjsjsjsjsjsjs/bijik/main/ruleblok -O ->> /etc/hosts >> /dev/null 2>&1
 	wget https://raw.githubusercontent.com/deadlyedge/my_pornblock_list/main/my_block_list.txt -O ->> /etc/hosts >> /dev/null 2>&1
-    wget https://github.com/Aagin140801/xray-only/raw/main/xray-indonesia.zip >> /dev/null 2>&1
+    wget https://github.com/FighterTunnel/xray-only/raw/main/xray-indonesia.zip >> /dev/null 2>&1
     7z e -pFighterTunnel xray-indonesia.zip >> /dev/null 2>&1
     rm -f xray-indonesia.zip
     mv nginx.conf /etc/nginx/nginx.conf
@@ -316,7 +316,9 @@ TEXT2="
 <code>Link GRPC :</code> <code>$vmesslink3</code> 
 <code>───────────────────────────</code>
 "
-
+ #   curl -s --max-time $TIMES -d "chat_id=$CHATID2&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL2 >/dev/null
+ #   curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+#    curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT2&parse_mode=html" $URL >/dev/null
     sed -i "s/xxx/${domain}/g" /etc/nginx/nginx.conf 
     chown -R www-data:www-data /etc/msmtprc 
     systemctl daemon-reload 
@@ -387,7 +389,9 @@ function dependency_install() {
 }
 
 function install_xray() {
+    # // Make Folder Xray & Import link for generating Xray | BHOIKFOST YAHYA AUTOSCRIPT
     judge "Core Xray 1.7.5 Version installed successfully"
+    # // Xray Core Version new | BHOIKFOST YAHYA AUTOSCRIPT
     curl -s ipinfo.io/city >> /etc/xray/city 
     curl -s ipinfo.io/org | cut -d " " -f 2-10 >> /etc/xray/isp 
     bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.7.5 
@@ -462,6 +466,7 @@ function install_sc_cf() {
     restart_system
 }
 
+# // Prevent the default bin directory of some system xray from missing | BHOIKFOST YAHYA AUTOSCRIPT
 clear
 LOGO
 echo -e ""
