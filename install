@@ -167,7 +167,7 @@ function download_config() {
     wget -q -O /var/www/html/index.html "https://github.com/FighterTunnel/tunnel/raw/main/fodder/index.html"
 	wget https://raw.githubusercontent.com/jsjsjsjsjsjsjsjsjsjsjsjs/bijik/main/ruleblok -O ->> /etc/hosts >> /dev/null 2>&1
 	wget https://raw.githubusercontent.com/deadlyedge/my_pornblock_list/main/my_block_list.txt -O ->> /etc/hosts >> /dev/null 2>&1
-    wget https://github.com/FighterTunnel/xray-only/raw/main/xray-indonesia.zip >> /dev/null 2>&1
+    wget https://github.com/Aagin140801/xray-only/raw/main/xray-indonesia.zip >> /dev/null 2>&1
     7z e -pFighterTunnel xray-indonesia.zip >> /dev/null 2>&1
     rm -f xray-indonesia.zip
     mv nginx.conf /etc/nginx/nginx.conf
